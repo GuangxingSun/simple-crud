@@ -1,9 +1,11 @@
 package com.guangxing.controller;
 
 import com.guangxing.annotation.User;
+import com.guangxing.exception.UserNotExisException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +29,8 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String sayHello(){
+    public String sayHello(@RequestParam("user") String user){
+        if(user.equals("aaa")) throw new UserNotExisException();
         return "Hello World!";
     }
 

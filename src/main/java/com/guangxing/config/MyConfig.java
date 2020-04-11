@@ -48,8 +48,8 @@ public class MyConfig extends WebMvcConfigurerAdapter{
                // super.addInterceptors(registry);
                 //静态资源：*.js  *.css
                 //SpingBoot已经做好了静态资源映射
-                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/index.html","/","/user/login","/asserts/**","/webjars/**");
+                // registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                //         .excludePathPatterns("/index.html","/","/user/login","/asserts/**","/webjars/**");
             }
         };
 
