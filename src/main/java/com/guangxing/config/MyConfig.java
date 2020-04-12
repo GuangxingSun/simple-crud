@@ -1,12 +1,9 @@
 package com.guangxing.config;
 
-import com.guangxing.component.LoginHandlerInterceptor;
 import com.guangxing.component.MylocaleResolver;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -27,6 +24,10 @@ public class MyConfig extends WebMvcConfigurerAdapter{
         //浏览器发送/guangxing  请求来到success
         registry.addViewController("/guangxing").setViewName("success");
     }
+
+
+
+
 
     /**
      * 所有WebMvcConfigAdapter组件都会一起起作用
